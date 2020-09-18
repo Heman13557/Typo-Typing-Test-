@@ -38,8 +38,8 @@ def submit(data):
     if c1==0:
         L2 = Label(root, text="Empty").grid(row=4, column=2)
     else:
-        L2 = Label(root, text="Accuracy:"+str((c/c1)*100)+"%").grid(row=4, column=2)
-        L3 = Label(root, text="Speed:"+ str(word*60/t2)+"wpm").grid(row=5, column=2)
+        L2 = Label(root, text="Accuracy:"+str(round((c/c1)*100),3)+"%").grid(row=4, column=2)
+        L3 = Label(root, text="Speed:"+ str(round(word*60/t2),3)+"wpm").grid(row=5, column=2)
         L4 = Label(root, text="Words:"+str(word)).grid(row=6, column=2)
 
 B1 = Button(root, text="Start", bg="red", fg="white", command=lambda:start(1)).grid(row=1, column=0)
